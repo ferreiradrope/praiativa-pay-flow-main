@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PraiAtiva Design System - Blue/Orange Ocean theme 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* PraiAtiva color palette - Deep ocean blue with vibrant orange accents */
+    --background: 210 24% 8%;  /* Deep navy blue background */
+    --foreground: 210 8% 98%;  /* Light text on dark background */
+    
+    --card: 210 20% 12%;       /* Dark blue cards */
+    --card-foreground: 210 8% 95%;
+    
+    --popover: 210 20% 12%;
+    --popover-foreground: 210 8% 95%;
+    
+    --primary: 33 85% 60%;     /* Orange/yellow for primary actions */
+    --primary-foreground: 210 24% 8%;
+    
+    --secondary: 210 55% 55%;  /* Vibrant light blue */
+    --secondary-foreground: 210 8% 98%;
+    
+    --muted: 210 15% 20%;      /* Muted dark blue */
+    --muted-foreground: 210 8% 70%;
+    
+    --accent: 210 55% 50%;     /* Accent blue */
+    --accent-foreground: 210 8% 98%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 8% 98%;
+    
+    --border: 210 15% 25%;     /* Border color */
+    --input: 210 15% 25%;      /* Input background */
+    --ring: 33 85% 60%;        /* Focus ring color (orange) */
+    
+    --radius: 0.5rem;
+    
+    --sidebar-background: 210 20% 12%;
+    --sidebar-foreground: 210 8% 95%;
+    --sidebar-primary: 33 85% 60%;
+    --sidebar-primary-foreground: 210 24% 8%;
+    --sidebar-accent: 210 15% 20%;
+    --sidebar-accent-foreground: 210 8% 95%;
+    --sidebar-border: 210 15% 25%;
+    --sidebar-ring: 33 85% 60%;
+  }
+
+  .dark {
+    --background: 210 24% 8%;
+    --foreground: 210 8% 98%;
+    
+    --card: 210 20% 12%;
+    --card-foreground: 210 8% 95%;
+    
+    --popover: 210 20% 12%;
+    --popover-foreground: 210 8% 95%;
+    
+    --primary: 33 85% 60%;
+    --primary-foreground: 210 24% 8%;
+    
+    --secondary: 210 55% 55%;
+    --secondary-foreground: 210 8% 98%;
+    
+    --muted: 210 15% 20%;
+    --muted-foreground: 210 8% 70%;
+    
+    --accent: 210 55% 50%;
+    --accent-foreground: 210 8% 98%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 8% 98%;
+    
+    --border: 210 15% 25%;
+    --input: 210 15% 25%;
+    --ring: 33 85% 60%;
+    
+    --sidebar-background: 210 20% 12%;
+    --sidebar-foreground: 210 8% 95%;
+    --sidebar-primary: 33 85% 60%;
+    --sidebar-primary-foreground: 210 24% 8%;
+    --sidebar-accent: 210 15% 20%;
+    --sidebar-accent-foreground: 210 8% 95%;
+    --sidebar-border: 210 15% 25%;
+    --sidebar-ring: 33 85% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, hsl(210, 24%, 8%), hsl(210, 20%, 12%));
+    min-height: 100vh;
+  }
+}
+
+/* Custom utilities for PraiAtiva */
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(33, 85%, 60%), hsl(45, 95%, 65%));
+  }
+  
+  .gradient-secondary {
+    background: linear-gradient(135deg, hsl(210, 55%, 55%), hsl(210, 65%, 65%));
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 20px hsl(33 85% 60% / 0.3);
+  }
+  
+  .shadow-card {
+    box-shadow: 0 8px 32px hsl(210 24% 4% / 0.4);
+  }
+}
